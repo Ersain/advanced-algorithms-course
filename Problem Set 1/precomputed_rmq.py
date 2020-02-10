@@ -1,9 +1,3 @@
-"""
-Implementing the PrecomputedRMQ type using the ⟨O(n^2), O(1)⟩ RMQ data structure that
-precomputes the answers to all possible range minimum queries.
-"""
-
-
 class PrecomputedRMQ:
     def __init__(self, arr):
         n = len(arr)
