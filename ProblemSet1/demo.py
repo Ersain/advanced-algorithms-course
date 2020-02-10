@@ -8,10 +8,10 @@ precomputed_rmq = PrecomputedRMQ(a)
 sparse_table_rmq = SparseTableRMQ(a)
 
 print(
-    precomputed_rmq.query(i=0, j=4)
+    precomputed_rmq.query(i=0, j=4) == 1
 )
 print(
-    sparse_table_rmq.query(i=2, j=5)
+    sparse_table_rmq.query(i=2, j=6) == 3
 )
 
 print(skylines([4, 2, 3, 1]) == 6)
