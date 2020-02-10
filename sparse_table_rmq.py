@@ -23,11 +23,3 @@ class SparseTableRMQ:
         return min(
             self.preprocessed[k][i], self.preprocessed[k][j - 2 ** k]
         )
-
-
-a = [3, 1, 5, 3, 4, 7, 6]
-rmq = SparseTableRMQ(a)
-for i in rmq.preprocessed:
-    print(i)
-
-print(rmq.query(2, len(a)))

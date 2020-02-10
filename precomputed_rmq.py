@@ -17,3 +17,6 @@ class PrecomputedRMQ:
                 self.precomputed[j - 1 - i][j] = min(
                     self.precomputed[j - 1 - i][j - 1], self.precomputed[j - i][j]
                 )
+
+    def query(self, i, j):
+        return self.precomputed[i][j]
