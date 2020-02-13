@@ -10,3 +10,6 @@ def skylines(arr):
         stack.append(i)
     arr.pop()
     return res
+
+
+print(skylines([1, 2, 4]))

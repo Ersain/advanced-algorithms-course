@@ -4,16 +4,16 @@ from math import log2
 class SparseTableRMQ:
     def __init__(self, arr):
         n = len(arr)
-        self.preprocessed = [[0 for i in range(n)] for j in range(int(log2(n)) + 1)]
+        self.precomputed = [[0 for i in range(n)] for j in range(int(log2(n)) + 1)]
 
         for i in range(n):
-            self.preprocessed[0][i] = arr[i]
+            self.precomputed[0][i] = arr[i]
 
         for j in range(1, int(log2(n)) + 1):
             i = 0
             while (i + 2 ** (j - 1)) < n:
-                self.preprocessed[j][i] = min(
-                    self.preprocessed[j - 1][i], self.preprocessed[j - 1][i + 2 ** (j - 1)]
+                self.precomputed[j][i] = min(
+                    self.precomputed[j - 1][i], self.precomputed[j - 1][i + 2 ** (j - 1)]
                 )
                 i += 1
 
@@ -21,5 +21,5 @@ class SparseTableRMQ:
         n = j - i
         k = int(log2(n))
         return min(
-            self.preprocessed[k][i], self.preprocessed[k][j - 2 ** k]
+            self.precomputed[k][i], self.precomputed[k][j - 2 ** k]
         )
