@@ -1,6 +1,6 @@
-from ProblemSet1.precomputed_rmq import PrecomputedRMQ
-from ProblemSet1.skylines import skylines
-from ProblemSet1.sparse_table_rmq import SparseTableRMQ
+from precomputed_rmq import PrecomputedRMQ
+from skylines import skylines
+from sparse_table_rmq import SparseTableRMQ
 
 a = [3, 1, 5, 3, 4, 7, 6]
 
