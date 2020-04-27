@@ -1,4 +1,4 @@
-from levenshtein import LevenshteinAutomata
+from LevenshteinAutomataProject.levenshtein import LevenshteinAutomata
 
 children = LevenshteinAutomata("children")
 
